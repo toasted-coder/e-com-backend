@@ -20,10 +20,10 @@ Product.init(
       allowNull: false,
     },
     price: {
-      type: DataTypes.DECIMAL[(8[,4])],
+      type: DataTypes.DECIMAL(8,4),
       allowNull: false,
       validate: {
-        //need to finish,
+        isDecimal: true,
       },
     },
     stock: {
