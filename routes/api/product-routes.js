@@ -7,7 +7,6 @@ const { Product, Category, Tag, ProductTag } = require("../../models");
 router.get("/", async (req, res) => {
   try {
     const productData = await Product.findAll({
-      // JOIN with tags & categories, using the ProductTag through table
       include: [
         { model: Tag, through: ProductTag, as: "tagged_products" },
         { model: Category },
@@ -45,7 +44,7 @@ router.get("/:id", async (req, res) => {
 });
 
 // create new product
-router.post("/", async (req, res) => {
+router.post("/", (req, res) => {
   /* req.body should look like this...
     {
       product_name: "Basketball",
@@ -66,7 +65,7 @@ router.post("/", async (req, res) => {
         });
         return ProductTag.bulkCreate(productTagIdArr);
       }
-      // if no product tags, just respond
+      // if no product tags
       res.status(200).json(product);
     })
     .then((productTagIds) => res.status(200).json(productTagIds))
