@@ -12,7 +12,7 @@
 
 ## Demonstration Video
 
-![DEMO VIDEO](https://drive.google.com/file/d/1hCfIBuKIZ92wPjjdxvIiz0jURqhjGXIK/view?usp=sharing)
+[DEMO VIDEO](https://drive.google.com/file/d/1hCfIBuKIZ92wPjjdxvIiz0jURqhjGXIK/view?usp=sharing)
 
 ## Description
 
